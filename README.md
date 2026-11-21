@@ -1,30 +1,43 @@
 # TunisPOS website
 
 Marketing site for TunisPOS, the point-of-sale software for Tunisian cafés, restaurants and grocery stores.
+Live: https://nidhalbouaziz.github.io/TunisPOS/
 
-Static HTML, CSS and JavaScript: no build step. French by default, Arabic (RTL) through the language button or `?lang=ar`.
+Static HTML, CSS and JavaScript, hosted on GitHub Pages. Every push to `main` redeploys it.
 
-## Structure
+## Pages
 
-- `index.html` - the page (French copy lives here)
-- `assets/css/style.css` - all styles; colour tokens at the top
-- `assets/js/main.js` - tabs, menu, gallery, Arabic translations (`AR` object) and contact details (`CONTACT` object)
-- `assets/img/screens/` - real screenshots of the product
-- `vercel.json` - caching and security headers
+| URL | Built from |
+| --- | --- |
+| `/` | French home page |
+| `/ar/` | Arabic home page (right to left) |
+| `/logiciel-caisse-cafe/` | Café landing page |
+| `/logiciel-caisse-restaurant/` | Restaurant landing page |
+| `/logiciel-caisse-epicerie/` | Grocery landing page |
 
-## Change contact details or prices
+All five pages are generated from one template. **Edit the template, never the generated `index.html` files.**
 
-- Phone, WhatsApp and email: `CONTACT` at the top of `assets/js/main.js`.
-- Prices: the three `.amount` values in `index.html`, the pre-filled WhatsApp messages in `WA_MSG` (`main.js`), and the JSON-LD `offers` in the `<head>`.
-
-## Run locally
-
-Open `index.html` in a browser, or serve the folder:
+## Edit and rebuild
 
 ```
-npx serve .
+cd tools
+npm install        # first time only
+node build.mjs
 ```
 
-## Deploy
+- `tools/template.html`: the page, in French
+- `tools/i18n-ar.json`: the Arabic text, by `data-i18n` key
+- `tools/pages.mjs`: titles, descriptions, headlines and articles of each page
+- `tools/build.mjs`: writes the pages, SEO tags, structured data (JSON-LD), `sitemap.xml` and cache-busting fingerprints
 
-Hosted on GitHub Pages: https://nidhalbouaziz.github.io/TunisPOS/ . Every push to `main` redeploys it.
+## Other files
+
+- `assets/css/style.css`: styles; colour tokens at the top
+- `assets/css/motion.css`: animations (only for visitors who haven't asked for reduced motion)
+- `assets/js/main.js`: tabs, menu, gallery; contact details in `CONTACT`, WhatsApp messages in `WA_MSG`
+- `assets/js/motion.js`: animation behaviour
+- `assets/js/demo.js`: the playable till ("Essayez la caisse")
+
+## Change prices
+
+Prices appear in `tools/template.html` (the three `.amount` values), `tools/i18n-ar.json` if mentioned in text, `tools/pages.mjs` (descriptions and articles), `tools/build.mjs` (`PRICES`, for structured data) and `assets/js/main.js` (`WA_MSG`). Rebuild after changing them.

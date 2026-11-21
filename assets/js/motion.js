@@ -116,13 +116,14 @@
     var list = ticker.querySelector('.ticker-list');
     ticker.querySelector('.ticker-track').appendChild(list.cloneNode(true));
   }
+  var TK = {
+    fr: { pause: 'Mettre en pause le défilement', play: 'Relancer le défilement' },
+    ar: { pause: 'إيقاف الشريط المتحرك', play: 'تشغيل الشريط المتحرك' }
+  };
   function tickerLabel() {
     if (!pauseBtn) return;
-    var paused = ticker.classList.contains('paused');
-    var ar = api.getLang && api.getLang() === 'ar';
-    var key = paused ? 'tk.play' : 'tk.pause';
-    var fr = paused ? 'Relancer le défilement' : 'Mettre en pause le défilement';
-    pauseBtn.textContent = ar && api.arText ? api.arText(key) : fr;
+    var t = TK[root.lang === 'ar' ? 'ar' : 'fr'];
+    pauseBtn.textContent = ticker.classList.contains('paused') ? t.play : t.pause;
   }
   if (pauseBtn) {
     pauseBtn.removeAttribute('aria-pressed');

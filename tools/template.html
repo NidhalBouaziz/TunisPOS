@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--SEO-HEAD-->
+  <meta name="theme-color" content="#102A43">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="TunisPOS">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="icon" href="assets/img/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Readex+Pro:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/motion.css">
+  <script>if (matchMedia("(prefers-reduced-motion: no-preference)").matches) document.documentElement.classList.add("js-motion");</script>
+
+  <!--LD-JSON-->
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Aller au contenu</a>
+
+  <!-- Icon sprite -->
+  <svg width="0" height="0" class="sprite" aria-hidden="true">
+    <symbol id="i-cup" viewBox="0 0 40 40"><path d="M9 15h18v8a8 8 0 0 1-8 8h-2a8 8 0 0 1-8-8z" fill="#fff" stroke="currentColor" stroke-width="2.2"/><path d="M27 17h2.5a3.5 3.5 0 0 1 0 7H27" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6 34h24" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M14 6c-1.5 2 1.5 3 0 5M20 6c-1.5 2 1.5 3 0 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity=".55"/></symbol>
+    <symbol id="i-glass" viewBox="0 0 40 40"><path d="M12 8h16l-2.5 25h-11z" fill="var(--fill, #fff)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M12.6 14h14.8" stroke="currentColor" stroke-width="1.6" opacity=".5"/></symbol>
+    <symbol id="i-bottle" viewBox="0 0 40 40"><path d="M17 5h6v5l3 4v19a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2V14l3-4z" fill="#e8f1fb" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M14 20h12" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-croissant" viewBox="0 0 40 40"><path d="M5 27c4-12 26-12 30 0-3 2-6 1-8-1-2 3-12 3-14 0-2 2-5 3-8 1z" fill="#f4c26b" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M15 20l2 6M25 20l-2 6M20 18v8" stroke="currentColor" stroke-width="1.6" opacity=".55"/></symbol>
+    <symbol id="i-bowl" viewBox="0 0 40 40"><path d="M5 18h30a15 15 0 0 1-30 0z" fill="var(--fill, #fff)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M12 33h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M15 9c-1.5 2 1.5 3 0 5M21 8c-1.5 2 1.5 3 0 5M27 9c-1.5 2 1.5 3 0 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity=".5"/></symbol>
+    <symbol id="i-plate" viewBox="0 0 40 40"><ellipse cx="20" cy="24" rx="16" ry="8" fill="#fff" stroke="currentColor" stroke-width="2.2"/><path d="M10 22c2-7 18-7 20 0" fill="var(--fill, #f4c26b)" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-sandwich" viewBox="0 0 40 40"><path d="M5 22c0-6 6-10 15-10s15 4 15 10z" fill="#f4c26b" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M5 25h30" stroke="#3a9a4a" stroke-width="3" stroke-linecap="round"/><path d="M6 28h28c0 3-2 5-5 5H11c-3 0-5-2-5-5z" fill="#e9a94e" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pack" viewBox="0 0 40 40"><path d="M10 7h20l2 26H8z" fill="var(--fill, #fff)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M10 7l1-3h18l1 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="13" y="15" width="14" height="9" rx="2" fill="#fff" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-carton" viewBox="0 0 40 40"><path d="M12 12l4-6h8l4 6v22H12z" fill="var(--fill, #fff)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M12 12h16" stroke="currentColor" stroke-width="2"/><path d="M16 20h8M16 25h6" stroke="currentColor" stroke-width="1.6" opacity=".6"/></symbol>
+    <symbol id="i-jar" viewBox="0 0 40 40"><rect x="11" y="10" width="18" height="24" rx="4" fill="var(--fill, #fff)" stroke="currentColor" stroke-width="2.2"/><rect x="13" y="6" width="14" height="5" rx="1.5" fill="currentColor"/><rect x="14" y="18" width="12" height="8" rx="1.5" fill="#fff" opacity=".85"/></symbol>
+    <symbol id="i-apple" viewBox="0 0 40 40"><path d="M20 13c-4-3-12-2-12 7 0 8 6 15 9 15 1.5 0 2-1 3-1s1.5 1 3 1c3 0 9-7 9-15 0-9-8-10-12-7z" fill="#e0453a" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M20 13c0-4 2-7 5-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-scan" viewBox="0 0 40 40"><path d="M6 12V7h5M29 7h5v5M34 28v5h-5M11 33H6v-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 13v14M16 13v14M19 13v14M23 13v14M26 13v14M29 13v14" stroke="currentColor" stroke-width="1.8"/><path d="M4 20h32" stroke="#E21B2D" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 20 20"><path d="M10 1.5l2.5 5.2 5.7.8-4.1 4 1 5.7L10 14.5l-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 6h18v12H3z M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-offline" viewBox="0 0 24 24"><path d="M4 5h16v11H4zM9 20h6M12 16v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><path d="M9 10.5l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-lang" viewBox="0 0 24 24"><path d="M4 5h9M8.5 3v2M6 5c.5 3 2.5 5.5 5 7M11 5c-.6 3.5-3 6.5-6 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M13 21l4-9 4 9M14.5 18h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 9.5h6M9 12h6M12 9.5V16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-usb" viewBox="0 0 24 24"><path d="M8 9h8v12H8zM10 3h4v6h-4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M11 13v4M13 13v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  </svg>
+
+  <header class="nav" id="top">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="TunisPOS, accueil">
+        <img src="assets/img/icon.svg" alt="" width="34" height="34">
+        <span>Tunis<b>POS</b></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr" data-i18n="menu">Menu</span>
+        <span class="bars" aria-hidden="true"></span>
+      </button>
+      <nav class="nav-links" id="nav-links" aria-label="Principal">
+        <a href="#metiers" data-tab-link="cafe" data-i18n="nav.cafe">Café</a>
+        <a href="#metiers" data-tab-link="restaurant" data-i18n="nav.restaurant">Restaurant</a>
+        <a href="#metiers" data-tab-link="epicerie" data-i18n="nav.epicerie">Épicerie</a>
+        <a href="#materiel" data-i18n="nav.hw">Matériel</a>
+        <a href="#tarifs" data-i18n="nav.pricing">Tarifs</a>
+        <a href="#questions" data-i18n="nav.faq">Questions</a>
+        <a class="lang-btn" data-lang-link href="ar/" hreflang="ar" lang="ar">العربية</a>
+        <a class="btn btn-wa btn-sm" href="#" data-wa="demo" target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n="nav.cta">Demander une démo</span>
+        </a>
+      </nav>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="hero-kicker"><svg aria-hidden="true"><use href="#i-star"/></svg><span data-i18n="hero.kicker">Logiciel de caisse fait en Tunisie</span></p>
+          <h1 data-i18n="hero.title">La caisse qui compte en millimes.</h1>
+          <p class="lede" data-i18n="hero.lede">TunisPOS fait tourner les cafés, les restaurants et les épiceries : tables et serveurs, ticket cuisine, code-barres et stock. Sans internet, en français et en arabe.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-wa" href="#" data-wa="demo" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n="hero.cta1">Demander une démo sur WhatsApp</span></a>
+            <a class="btn btn-ghost" href="#tarifs" data-i18n="hero.cta2">Voir les tarifs</a>
+          </div>
+          <p class="hero-note" data-i18n="hero.note">Démo gratuite, sans engagement. Livré avec le matériel, installé et branché.</p>
+        </div>
+
+        <div class="hero-visual" aria-label="Aperçu de la caisse TunisPOS en mode café" role="img" data-i18n-aria="hero.visual">
+          <div class="till" aria-hidden="true">
+            <div class="till-bar">
+              <span class="chip chip-on">Caisse 1</span>
+              <span class="chip">Tables</span>
+              <span class="chip">Ventes du jour</span>
+              <span class="till-dots"><i></i><i></i><i></i></span>
+            </div>
+            <div class="till-body">
+              <div class="till-grid">
+                <div class="tile" data-tap="1"><svg style="color:#6b3f1d"><use href="#i-cup"/></svg><b>Express</b><em>1,800 TND</em></div>
+                <div class="tile"><svg style="color:#6b3f1d"><use href="#i-cup"/></svg><b>Capucin</b><em>2,000 TND</em></div>
+                <div class="tile"><svg style="color:#6b3f1d"><use href="#i-cup"/></svg><b>Direct</b><em>2,200 TND</em></div>
+                <div class="tile" data-tap="2"><svg style="color:#2f6b3a;--fill:#cfe8c9"><use href="#i-glass"/></svg><b>Thé à la menthe</b><em>1,200 TND</em></div>
+                <div class="tile tile-hit" data-tap="4"><svg style="color:#8a6a00;--fill:#fbe7a1"><use href="#i-glass"/></svg><b>Citronnade</b><em>3,000 TND</em></div>
+                <div class="tile"><svg style="color:#a3480c;--fill:#ffcf99"><use href="#i-glass"/></svg><b>Jus d'orange</b><em>3,500 TND</em></div>
+                <div class="tile"><svg style="color:#2b5a8a"><use href="#i-bottle"/></svg><b>Eau 0,5 L</b><em>1,000 TND</em></div>
+                <div class="tile" data-tap="3"><svg style="color:#8a5a12"><use href="#i-croissant"/></svg><b>Croissant</b><em>1,300 TND</em></div>
+                <div class="tile"><svg style="color:#6b3f1d"><use href="#i-cup"/></svg><b>Café crème</b><em>2,800 TND</em></div>
+              </div>
+              <div class="till-cart">
+                <div class="cart-head"><span>T5</span><span>Sami</span></div>
+                <div class="cart-line"><span>2 × Express</span><span>3,600</span></div>
+                <div class="cart-line"><span>1 × Thé menthe</span><span>1,200</span></div>
+                <div class="cart-line"><span>2 × Croissant</span><span>2,600</span></div>
+                <div class="cart-line cart-new"><span>1 × Citronnade</span><span>3,000</span></div>
+                <div class="cart-total"><span>Total</span><strong data-count-to="10400">10,400</strong></div>
+                <div class="cart-pay">Payer</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="printer" aria-hidden="true">
+            <div class="printer-slot"></div>
+            <div class="paper-window">
+              <div class="receipt receipt-print">
+                <p class="r-center r-strong">CAFÉ EL WAHA</p>
+                <p class="r-center">Avenue Habib Bourguiba, Tunis</p>
+                <p class="r-rule"></p>
+                <p class="r-row"><span>Table T5</span><span>Serveur : Sami</span></p>
+                <p class="r-row"><span>20/11/2026</span><span>09:42</span></p>
+                <p class="r-rule"></p>
+                <p class="r-row"><span>2 × Express</span><span>3,600</span></p>
+                <p class="r-row"><span>1 × Thé à la menthe</span><span>1,200</span></p>
+                <p class="r-row"><span>2 × Croissant</span><span>2,600</span></p>
+                <p class="r-row"><span>1 × Citronnade</span><span>3,000</span></p>
+                <p class="r-rule"></p>
+                <p class="r-row r-total"><span>TOTAL</span><span>10,400 TND</span></p>
+                <p class="r-row"><span>Espèces</span><span>20,000</span></p>
+                <p class="r-row"><span>Rendu</span><span>9,600</span></p>
+                <p class="r-rule"></p>
+                <p class="r-center"><span class="r-ar" lang="ar">شكرا على زيارتكم</span> · Merci !</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="wrap facts" role="list">
+        <li><svg aria-hidden="true"><use href="#i-offline"/></svg><div><strong data-i18n="f1.t">Fonctionne sans internet</strong><span data-i18n="f1.d">Installé sur votre PC Windows. Une coupure ne bloque jamais la caisse.</span></div></li>
+        <li><svg aria-hidden="true"><use href="#i-lang"/></svg><div><strong data-i18n="f2.t">Français, arabe, anglais</strong><span data-i18n="f2.d">Chaque écran change de langue en un clic, tickets compris.</span></div></li>
+        <li><svg aria-hidden="true"><use href="#i-coin"/></svg><div><strong data-i18n="f3.t">Le dinar à trois décimales</strong><span data-i18n="f3.d">1,800 TND, jamais 1,80. Les millimes sont justes du ticket au rapport.</span></div></li>
+        <li><svg aria-hidden="true"><use href="#i-usb"/></svg><div><strong data-i18n="f4.t">Sauvegarde sur clé USB</strong><span data-i18n="f4.d">Quatorze copies gardées. Un PC en panne ne fait pas perdre la boutique.</span></div></li>
+      </ul>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <ul class="ticker-list">
+          <li><b>Express</b> 1,800 TND</li><li><b>Capucin</b> 2,000 TND</li><li><b>Brik à l'œuf</b> 3,500 TND</li><li><b>Huile d'olive 1 L</b> 18,500 TND</li><li><b>Thé à la menthe</b> 1,200 TND</li><li><b>Salade tunisienne</b> 6,000 TND</li><li><b>Café moulu 250 g</b> 6,900 TND</li><li><b>Citronnade</b> 3,000 TND</li><li><b>Escalope panée</b> 16,000 TND</li><li><b>Lait demi-écrémé 1 L</b> 1,450 TND</li><li><b>Sandwich tunisien</b> 6,000 TND</li><li><b>Croissant</b> 1,300 TND</li><li><b>Sucre blanc 1 kg</b> 2,300 TND</li><li><b>Jus d'orange pressé</b> 3,500 TND</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ticker-ctl"><button type="button" class="ticker-pause" aria-pressed="false" data-i18n="tk.pause">Mettre en pause le défilement</button></div>
+
+    <!-- METIERS -->
+    <section class="section metiers" id="metiers">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-i18n="m.title">Un module pour votre métier.</h2>
+          <p data-i18n="m.lede">À l'installation, on choisit le métier. TunisPOS charge la carte ou le catalogue, règle la caisse et vous laisse fixer vos prix.</p>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Métiers" data-i18n-aria="m.tabs">
+          <span class="tab-ind" aria-hidden="true"></span>
+          <button role="tab" id="tab-cafe" aria-controls="panel-cafe" aria-selected="true" data-tab="cafe"><span data-i18n="m.t1">Café</span><small data-i18n="m.t1s">Tables, serveurs, ticket bar</small></button>
+          <button role="tab" id="tab-restaurant" aria-controls="panel-restaurant" aria-selected="false" tabindex="-1" data-tab="restaurant"><span data-i18n="m.t2">Restaurant</span><small data-i18n="m.t2s">Carte, ticket cuisine, addition</small></button>
+          <button role="tab" id="tab-epicerie" aria-controls="panel-epicerie" aria-selected="false" tabindex="-1" data-tab="epicerie"><span data-i18n="m.t3">Épicerie &amp; supérette</span><small data-i18n="m.t3s">Code-barres, catalogue, stock</small></button>
+        </div>
+
+        <!-- Café -->
+        <div class="panel" role="tabpanel" id="panel-cafe" aria-labelledby="tab-cafe">
+          <div class="panel-visual">
+            <div class="mock mock-tables" aria-hidden="true">
+              <div class="mock-title">Tables</div>
+              <div class="tables">
+                <div class="t">T1<small>Libre</small></div>
+                <div class="t">T2<small>Libre</small></div>
+                <div class="t busy">T3<small>Sami</small><small>6,800 TND</small></div>
+                <div class="t">T4<small>Libre</small></div>
+                <div class="t">T5<small>Libre</small></div>
+                <div class="t">T6<small>Libre</small></div>
+                <div class="t busy">T7<small>Amine</small><small>12,400 TND</small></div>
+                <div class="t">T8<small>Libre</small></div>
+                <div class="t">T9<small>Libre</small></div>
+                <div class="t">T10<small>Libre</small></div>
+                <div class="t">T11<small>Libre</small></div>
+                <div class="t">T12<small>Libre</small></div>
+                <div class="t wide">Terrasse 1<small>Libre</small></div>
+                <div class="t wide busy">Terrasse 2<small>Sami</small><small>4,000 TND</small></div>
+                <div class="t wide">Terrasse 3<small>Libre</small></div>
+                <div class="t wide">Terrasse 4<small>Libre</small></div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-copy">
+            <h3 data-i18n="c.h">Le café, de la terrasse au comptoir.</h3>
+            <ul class="ticks">
+              <li data-i18n-html="c.1"><strong>Plan de salle.</strong> Tables libres en vert, occupées en orange, avec le serveur et le montant en cours.</li>
+              <li data-i18n-html="c.2"><strong>Ticket bar.</strong> À chaque envoi, le bar reçoit seulement les nouvelles boissons, sans prix.</li>
+              <li data-i18n-html="c.3"><strong>Addition partagée.</strong> « Payer une partie » : chacun règle ce qu'il a pris.</li>
+              <li data-i18n-html="c.4"><strong>Ventes par serveur.</strong> Le soir, vous savez qui a vendu quoi.</li>
+              <li data-i18n-html="c.5"><strong>Carte café prête.</strong> 25 articles en 6 familles, avec photos. Les 12 plus vendus sont épinglés en haut de la caisse.</li>
+            </ul>
+            <a class="more-link" href="logiciel-caisse-cafe/" data-i18n="c.more">Tout sur la caisse café</a>
+          </div>
+        </div>
+
+        <!-- Restaurant -->
+        <div class="panel" role="tabpanel" id="panel-restaurant" aria-labelledby="tab-restaurant" hidden>
+          <div class="panel-visual">
+            <div class="mock-tickets" aria-hidden="true">
+              <div class="receipt receipt-sm">
+                <p class="r-strong r-big">CUISINE</p>
+                <p>Table : T5 · Serveur : Sami</p>
+                <p>Heure : 13:24</p>
+                <p class="r-rule"></p>
+                <p class="r-row r-strong"><span>1 ×</span><span class="r-grow">Lablabi</span></p>
+                <p class="r-row r-strong"><span>2 ×</span><span class="r-grow">Brik à l'œuf</span></p>
+                <p class="r-row r-strong"><span>1 ×</span><span class="r-grow">Couscous poulet</span></p>
+                <p class="r-row r-strong"><span>1 ×</span><span class="r-grow">Ojja merguez</span></p>
+              </div>
+              <div class="receipt receipt-sm receipt-offset">
+                <p class="r-strong r-big">BAR</p>
+                <p>Table : T5 · Serveur : Sami</p>
+                <p>Heure : 13:24</p>
+                <p class="r-rule"></p>
+                <p class="r-row r-strong"><span>2 ×</span><span class="r-grow">Citronnade</span></p>
+                <p class="r-row r-strong"><span>1 ×</span><span class="r-grow">Eau 1,5 L</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="panel-copy">
+            <h3 data-i18n="r.h">Un « Envoyer », et chaque poste reçoit son ticket.</h3>
+            <ul class="ticks">
+              <li data-i18n-html="r.1"><strong>Ticket cuisine et ticket bar.</strong> Les plats partent en cuisine, les boissons au bar. Vous choisissez quel poste reçoit quelle famille.</li>
+              <li data-i18n-html="r.2"><strong>Carte tunisienne prête.</strong> 39 plats en 6 familles, des entrées aux grillades, avec images et prix habituels d'un restaurant de quartier.</li>
+              <li data-i18n-html="r.3"><strong>Imprimantes trouvées seules.</strong> Une recherche sur le réseau, un bouton « Imprimer un test », et c'est branché.</li>
+              <li data-i18n-html="r.4"><strong>Tout le module café inclus.</strong> Tables, serveurs, addition partagée et ventes par serveur.</li>
+              <li data-i18n-html="r.5"><strong>Prix rapides.</strong> Toute la carte sur une page : changez vos prix en une minute.</li>
+            </ul>
+            <a class="more-link" href="logiciel-caisse-restaurant/" data-i18n="r.more">Tout sur la caisse restaurant</a>
+          </div>
+        </div>
+
+        <!-- Épicerie -->
+        <div class="panel" role="tabpanel" id="panel-epicerie" aria-labelledby="tab-epicerie" hidden>
+          <div class="panel-visual">
+            <div class="mock mock-cart" aria-hidden="true">
+              <div class="scan"><span class="scan-icon"></span><span class="scan-code">6191513500515</span><span class="scan-ok">✓</span></div>
+              <div class="cl"><span>Pâtes spaghetti 500 g</span><span>1 × 1,200</span><b>1,200</b></div>
+              <div class="cl"><span>Café moulu 250 g</span><span>1 × 6,900</span><b>6,900</b></div>
+              <div class="cl"><span>Lait demi-écrémé 1 L</span><span>1 × 1,450</span><b>1,450</b></div>
+              <div class="cl"><span>Sucre blanc 1 kg</span><span>1 × 2,300</span><b>2,300</b></div>
+              <div class="cl cl-new"><span>Huile d'olive 1 L</span><span>1 × 18,500</span><b>18,500</b></div>
+              <div class="cart-sum"><span>TOTAL</span><strong>30,350 TND</strong></div>
+              <div class="catalog-badge"><b>2 934</b> articles chargés · catalogue grande surface</div>
+            </div>
+          </div>
+          <div class="panel-copy">
+            <h3 data-i18n="e.h">Ouvrez demain, avec vos rayons déjà en caisse.</h3>
+            <ul class="ticks">
+              <li data-i18n-html="e.1"><strong>Catalogues prêts.</strong> Épicerie, grande surface (2 934 articles) ou pâtisserie, chargés en quelques minutes. Les prix habituels de 400 articles courants sont déjà remplis.</li>
+              <li data-i18n-html="e.2"><strong>Douchette et vente au kilo.</strong> Scannez, ou tapez 1,5 kg de pommes : la caisse calcule.</li>
+              <li data-i18n-html="e.3"><strong>Import depuis Excel.</strong> Un essai à blanc montre chaque erreur avant de créer quoi que ce soit. « 1,250 » et « 3,200 DT » sont bien compris.</li>
+              <li data-i18n-html="e.4"><strong>Étiquettes de rayon.</strong> Code-barres EAN-13, sur imprimante d'étiquettes ou planche A4 de 24.</li>
+              <li data-i18n-html="e.5"><strong>Stock sous contrôle.</strong> Inventaire guidé, alertes de dates de péremption, meilleures ventes et invendus.</li>
+            </ul>
+            <a class="more-link" href="logiciel-caisse-epicerie/" data-i18n="e.more">Tout sur la caisse épicerie</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISPLAY BAND -->
+    <section class="display-band" aria-labelledby="db-title">
+      <div class="wrap">
+        <h2 id="db-title" class="sr" data-i18n="db.title">TunisPOS en chiffres</h2>
+        <ul class="vfd-row" role="list">
+          <li class="vfd"><div class="vfd-screen"><span class="odo" data-odo="2 934">2 934</span></div><p data-i18n="db.1">articles prêts à vendre, dès l'installation</p></li>
+          <li class="vfd"><div class="vfd-screen"><span class="odo" data-odo="39">39</span></div><p data-i18n="db.2">plats tunisiens déjà sur la carte</p></li>
+          <li class="vfd"><div class="vfd-screen"><span class="odo" data-odo="0,000">0,000</span></div><p data-i18n="db.3">dinar d'abonnement obligatoire</p></li>
+          <li class="vfd"><div class="vfd-screen"><span class="odo" data-odo="14">14</span></div><p data-i18n="db.4">sauvegardes gardées sur clé USB</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PLAYABLE TILL -->
+    <section class="section demo" id="essayer">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-i18n="d.title">Essayez la caisse. Ici, tout de suite.</h2>
+          <p data-i18n="d.lede">Touchez des articles, encaissez, et regardez votre ticket sortir. Des dinars à trois décimales, le montant à rendre, le ticket : comme dans TunisPOS.</p>
+        </div>
+        <div class="demo-grid">
+          <div class="demo-till">
+            <div class="demo-top">
+              <div class="demo-modes" role="group" aria-label="Choisir un métier" data-i18n-aria="hw.aria">
+                <button type="button" data-mode="cafe" aria-pressed="true" data-i18n="m.t1">Café</button>
+                <button type="button" data-mode="restaurant" aria-pressed="false" data-i18n="m.t2">Restaurant</button>
+                <button type="button" data-mode="epicerie" aria-pressed="false" data-i18n="nav.epicerie">Épicerie</button>
+              </div>
+              <span class="demo-clock" aria-hidden="true">09:42</span>
+            </div>
+            <div class="demo-body">
+              <div class="demo-products" role="group" aria-label="Articles" data-i18n-aria="d.products"></div>
+              <div class="demo-cart">
+                <div class="demo-cart-head"><span data-i18n="d.order">Commande</span><span class="demo-count">0</span></div>
+                <ul class="demo-lines" role="list"></ul>
+                <p class="demo-empty" data-i18n="d.empty">Touchez un article pour commencer.</p>
+                <div class="demo-sum"><span data-i18n="d.total">Total</span><p><strong class="demo-total">0,000</strong> <small>TND</small></p></div>
+                <div class="demo-actions">
+                  <button type="button" class="demo-clear" data-i18n="d.clear">Vider</button>
+                  <button type="button" class="demo-pay" disabled data-i18n="d.pay">Payer</button>
+                </div>
+              </div>
+            </div>
+            <div class="demo-paypanel" hidden>
+              <div class="demo-pp-box" role="group" aria-labelledby="pp-title">
+                <p class="demo-pp-total"><span data-i18n="d.total">Total</span> <strong class="demo-pp-amount">0,000 TND</strong></p>
+                <p class="demo-pp-title" id="pp-title" data-i18n="d.given">Montant reçu du client</p>
+                <div class="demo-cash"></div>
+                <p class="demo-change"><span data-i18n="d.change">À rendre</span> <strong class="demo-change-amount">—</strong></p>
+                <div class="demo-pp-actions">
+                  <button type="button" class="demo-back" data-i18n="d.back">Retour</button>
+                  <button type="button" class="demo-confirm" disabled data-i18n="d.confirm">Encaisser et imprimer</button>
+                </div>
+              </div>
+            </div>
+            <p class="sr demo-live" aria-live="polite"></p>
+          </div>
+          <div class="demo-side">
+            <div class="demo-printer">
+              <div class="printer-slot"></div>
+              <div class="demo-paper-window">
+                <div class="receipt demo-receipt" hidden></div>
+              </div>
+              <p class="demo-idle" data-i18n="d.idle">Votre ticket sortira ici.</p>
+            </div>
+            <div class="demo-after" hidden>
+              <p class="demo-after-title" data-i18n="d.done">Bravo, vous savez déjà encaisser avec TunisPOS.</p>
+              <a class="btn btn-wa" href="#" data-wa="tried" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n="d.cta">Demander ma vraie démo</span></a>
+              <button type="button" class="demo-new" data-i18n="d.new">Nouvelle vente</button>
+            </div>
+          </div>
+        </div>
+        <p class="demo-note" data-i18n="d.note">Démonstration simplifiée, avec des prix d'exemple. Le vrai TunisPOS va plus loin : tables, cuisine, stock, rapports.</p>
+      </div>
+    </section>
+
+    <!-- ROLES -->
+    <section class="section roles">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-i18n="ro.title">Chacun son rôle, chacun ses écrans.</h2>
+          <p data-i18n="ro.lede">Le caissier encaisse. Le responsable autorise. Le propriétaire voit tout. Rien ne sort de la caisse sans laisser de trace.</p>
+        </div>
+        <div class="role-list">
+          <article class="role">
+            <h3 data-i18n="ro.1.t">Le caissier</h3>
+            <p data-i18n="ro.1.d">Ouvre sa caisse avec le fond de caisse, encaisse, voit le montant à rendre, ferme en comptant ses espèces. Il n'accède ni aux rapports ni aux réglages.</p>
+          </article>
+          <article class="role">
+            <h3 data-i18n="ro.2.t">Le responsable</h3>
+            <p data-i18n="ro.2.d">Son code personnel autorise les annulations et les remises. Il fait l'inventaire, imprime les étiquettes et met à jour les prix.</p>
+          </article>
+          <article class="role">
+            <h3 data-i18n="ro.3.t">Le propriétaire</h3>
+            <p data-i18n="ro.3.d">Rapport du jour, ventes par serveur, meilleures ventes et invendus. Chaque action sensible est inscrite au journal, avec son auteur et l'heure.</p>
+          </article>
+          <article class="role">
+            <h3 data-i18n="ro.4.t">Le PC de la boutique</h3>
+            <p data-i18n="ro.4.d">Sauvegarde automatique sur clé USB. La page « Santé du système » montre l'âge de la dernière sauvegarde et l'espace disque avant qu'un problème n'arrive.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section gallery" id="captures">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-i18n="g.title">Le vrai logiciel, pas une maquette.</h2>
+          <p data-i18n="g.lede">Ces captures viennent de TunisPOS tel qu'il tourne aujourd'hui.</p>
+        </div>
+      </div>
+      <div class="shots" tabindex="0" aria-label="Captures d'écran" data-i18n-aria="g.aria">
+        <figure class="shot"><button type="button" class="shot-btn" data-full="assets/img/screens/cafe-caisse.png"><img src="assets/img/screens/cafe-caisse.png" alt="Caisse TunisPOS en mode café : boissons épinglées avec leurs prix en dinars" loading="lazy" width="1366" height="768"></button><figcaption data-i18n="g.1">Caisse café : les boissons les plus vendues épinglées en haut.</figcaption></figure>
+        <figure class="shot"><button type="button" class="shot-btn" data-full="assets/img/screens/tables.png"><img src="assets/img/screens/tables.png" alt="Plan de salle : table T5 occupée par le serveur Sami, 21,000 TND" loading="lazy" width="1366" height="768"></button><figcaption data-i18n="g.2">Plan de salle : T5 occupée par Sami, 21,000 TND.</figcaption></figure>
+        <figure class="shot"><button type="button" class="shot-btn" data-full="assets/img/screens/epicerie-arabe.png"><img src="assets/img/screens/epicerie-arabe.png" alt="Caisse épicerie en arabe avec un panier de 30,350 TND" loading="lazy" width="1366" height="768"></button><figcaption data-i18n="g.3">La même caisse en arabe, de droite à gauche.</figcaption></figure>
+        <figure class="shot"><button type="button" class="shot-btn" data-full="assets/img/screens/imprimantes.png"><img src="assets/img/screens/imprimantes.png" alt="Page Imprimantes : imprimantes cuisine et bar, et quelle famille va à quel poste" loading="lazy" width="1366" height="900"></button><figcaption data-i18n="g.4">Imprimantes : chaque famille vers son poste.</figcaption></figure>
+        <figure class="shot"><button type="button" class="shot-btn" data-full="assets/img/screens/carte-restaurant.png"><img src="assets/img/screens/carte-restaurant.png" alt="Page Restaurant : 39 plats de la carte chargés" loading="lazy" width="1366" height="768"></button><figcaption data-i18n="g.5">Carte restaurant chargée : 39 plats en un clic.</figcaption></figure>
+        <figure class="shot"><button type="button" class="shot-btn" data-full="assets/img/screens/catalogue.png"><img src="assets/img/screens/catalogue.png" alt="Chargement du catalogue : 2 934 articles ajoutés et liste de mise en route" loading="lazy" width="1366" height="768"></button><figcaption data-i18n="g.6">Catalogue chargé, avec la liste de mise en route.</figcaption></figure>
+        <figure class="shot"><button type="button" class="shot-btn" data-full="assets/img/screens/ventes-serveur.png"><img src="assets/img/screens/ventes-serveur.png" alt="Rapport des ventes par serveur pour une journée" loading="lazy" width="1366" height="768"></button><figcaption data-i18n="g.7">Ventes par serveur, jour par jour.</figcaption></figure>
+      </div>
+      <div class="wrap shots-nav">
+        <button type="button" class="round" data-scroll="-1" aria-label="Capture précédente" data-i18n-aria="g.prev"><span aria-hidden="true">‹</span></button>
+        <button type="button" class="round" data-scroll="1" aria-label="Capture suivante" data-i18n-aria="g.next"><span aria-hidden="true">›</span></button>
+      </div>
+    </section>
+
+    <!-- STEPS -->
+    <section class="section steps">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-i18n="s.title">De la démo au premier ticket.</h2>
+        </div>
+        <ol class="step-list">
+          <li><h3 data-i18n="s.1.t">Démo sur WhatsApp</h3><p data-i18n="s.1.d">On vous montre la caisse de votre métier, avec vos produits, à distance ou chez vous.</p></li>
+          <li><h3 data-i18n="s.2.t">Installation</h3><p data-i18n="s.2.d">Sur votre PC Windows, avec la carte ou le catalogue de votre métier déjà chargé et vos imprimantes réglées.</p></li>
+          <li><h3 data-i18n="s.3.t">Formation</h3><p data-i18n="s.3.d">Le caissier et le responsable, chacun sur ses propres écrans, jusqu'à ce que la caisse tourne sans vous.</p></li>
+          <li><h3 data-i18n="s.4.t">Vous encaissez</h3><p data-i18n="s.4.d">Et on reste joignable : douze mois d'assistance et de mises à jour sont inclus.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- HARDWARE -->
+    <section class="section hardware" id="materiel">
+      <div class="hw-track"><div class="hw-sticky">
+      <div class="wrap hw-grid">
+        <div class="hw-copy">
+          <h2 data-i18n="hw.title">Le logiciel, le matériel, et on branche tout.</h2>
+          <p class="hw-lede" data-i18n="hw.lede">TunisPOS arrive installé sur un pack complet. Le jour de l'ouverture, vous allumez et vous encaissez.</p>
+          <div class="hw-switch" role="group" aria-label="Voir le pack pour un métier" data-i18n-aria="hw.aria">
+            <button type="button" aria-pressed="true" data-hw="cafe" data-i18n="m.t1">Café</button>
+            <button type="button" aria-pressed="false" data-hw="restaurant" data-i18n="m.t2">Restaurant</button>
+            <button type="button" aria-pressed="false" data-hw="epicerie" data-i18n="nav.epicerie">Épicerie</button>
+          </div>
+          <div class="hw-rail" aria-hidden="true"><span></span></div>
+          <ul class="hw-list">
+            <li><strong data-i18n="hw.1.t">Écran tactile</strong><span data-i18n="hw.1.d">La caisse TunisPOS, au doigt, lisible de loin.</span></li>
+            <li><strong data-i18n="hw.2.t">Imprimante ticket 80 mm</strong><span data-i18n="hw.2.d">Tickets clients, bar et cuisine.</span></li>
+            <li><strong data-i18n="hw.3.t">Tiroir-caisse</strong><span data-i18n="hw.3.d">Billets et pièces rangés, sous clé.</span></li>
+            <li><strong data-i18n="hw.4.t">Douchette code-barres</strong><span data-i18n="hw.4.d">Un bip, et l'article est en caisse.</span></li>
+          </ul>
+          <a class="btn btn-wa" href="#" data-wa="pack" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n="hw.cta">Demander le prix du pack</span></a>
+          <p class="hw-note" data-i18n="hw.note">Prix selon votre configuration : une ou plusieurs imprimantes, douchette, tiroir.</p>
+        </div>
+
+        <div class="hw-scene" data-scene="cafe" role="img" aria-label="Pack TunisPOS : écran tactile affichant le logiciel, imprimante ticket, tiroir-caisse et douchette" data-i18n-aria="hw.scene">
+          <div class="hw-glow" aria-hidden="true"></div>
+
+          <svg class="hw-drawer" viewBox="0 0 660 150" aria-hidden="true">
+            <defs><linearGradient id="hw-dr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#323b47"/><stop offset="1" stop-color="#1b2129"/></linearGradient></defs>
+            <path d="M24 0h612l24 30H0z" fill="#3f4a58"/>
+            <rect x="0" y="30" width="660" height="120" rx="6" fill="url(#hw-dr)"/>
+            <rect x="18" y="44" width="624" height="92" rx="5" fill="none" stroke="#3f4a58" stroke-width="2"/>
+            <rect x="240" y="74" width="180" height="16" rx="8" fill="#10141a"/>
+            <circle cx="602" cy="64" r="9" fill="#b3bec9"/><rect x="600" y="58" width="4" height="12" rx="1" fill="#59636f"/>
+          </svg>
+
+          <div class="hw-terminal" aria-hidden="true">
+            <div class="hw-bezel">
+              <div class="hw-display">
+                <img data-screen="cafe" class="on" src="assets/img/screens/cafe-caisse.png" alt="" width="1366" height="768">
+                <img data-screen="restaurant" src="assets/img/screens/tables.png" alt="" width="1366" height="768" loading="lazy">
+                <img data-screen="epicerie" src="assets/img/screens/epicerie-caisse.png" alt="" width="1366" height="768" loading="lazy">
+                <span class="hw-glare"></span>
+              </div>
+              <span class="hw-chin"><svg><use href="#i-star"/></svg></span>
+            </div>
+            <svg class="hw-stand" viewBox="0 0 600 130">
+              <path d="M262 0h76l24 100H238z" fill="#232a33"/>
+              <path d="M262 0h20l-8 100h-36z" fill="#2d3540"/>
+              <rect x="140" y="94" width="320" height="32" rx="16" fill="#2b333e"/>
+              <rect x="164" y="97" width="272" height="6" rx="3" fill="#3e4956"/>
+            </svg>
+          </div>
+
+          <div class="hw-printer" aria-hidden="true">
+            <div class="hw-ticket">
+              <div class="hw-paper">
+                <div data-t="cafe"><b>TABLE T5 · SAMI</b><p><span>2× Express</span><span>3,600</span></p><p><span>1× Thé menthe</span><span>1,200</span></p><p><span>2× Croissant</span><span>2,600</span></p><p class="tt"><span>TOTAL</span><span>7,400</span></p></div>
+                <div data-t="restaurant"><b>CUISINE · T5</b><p><span>1× Lablabi</span></p><p><span>2× Brik à l'œuf</span></p><p><span>1× Couscous poulet</span></p><p><span>1× Ojja merguez</span></p></div>
+                <div data-t="epicerie"><b>ÉPICERIE YASMINE</b><p><span>Huile d'olive 1 L</span><span>18,500</span></p><p><span>Café moulu</span><span>6,900</span></p><p><span>Sucre 1 kg</span><span>2,300</span></p><p class="tt"><span>TOTAL</span><span>27,700</span></p></div>
+              </div>
+            </div>
+            <svg viewBox="0 0 240 200">
+              <path d="M20 72Q20 40 52 40h136q32 0 32 32v118q0 10-10 10H30q-10 0-10-10z" fill="#2a313b"/>
+              <path d="M30 54q4-10 24-10h132q20 0 24 10l6 44H24z" fill="#3b4551"/>
+              <rect x="50" y="50" width="140" height="7" rx="3.5" fill="#0c1015"/>
+              <rect x="20" y="98" width="200" height="3" fill="#1a1f26"/>
+              <rect x="40" y="152" width="48" height="16" rx="8" fill="#1a1f26"/>
+              <circle cx="192" cy="160" r="5.5" fill="#35e07f"/>
+            </svg>
+          </div>
+
+          <svg class="hw-scanner" viewBox="0 0 340 170" aria-hidden="true">
+            <defs><linearGradient id="hw-beam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff3347" stop-opacity=".55"/><stop offset="1" stop-color="#ff3347" stop-opacity="0"/></linearGradient></defs>
+            <path class="hw-beam" d="M204 32 330 4v104L198 62z" fill="url(#hw-beam)"/>
+            <path d="M10 32q0-22 22-22h118l52 12q10 3 7 15l-9 32q-3 11-15 11h-73l-15 70q-2 10-13 10H64q-11 0-9-11l13-69H32q-22 0-22-22z" fill="#232a33"/>
+            <path d="M24 20h120l40 9" stroke="#3a4450" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <path d="M199 27l9 6-9 31-10-2z" fill="#E21B2D"/>
+            <path d="M104 80q10 16-2 30" stroke="#E21B2D" stroke-width="7" fill="none" stroke-linecap="round"/>
+          </svg>
+
+          <span class="hw-chip chip-screen" data-i18n="hw.1.t">Écran tactile</span>
+          <span class="hw-chip chip-printer" data-i18n="hw.2.s">Imprimante 80 mm</span>
+          <span class="hw-chip chip-drawer" data-i18n="hw.3.t">Tiroir-caisse</span>
+          <span class="hw-chip chip-scanner" data-i18n="hw.4.s">Douchette</span>
+        </div>
+      </div>
+      </div></div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section pricing" id="tarifs">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-i18n="p.title">Un prix clair, payé une fois.</h2>
+          <p data-i18n="p.lede">Le prix du logiciel pour un poste, installation et formation comprises. Ajoutez le pack matériel : on livre tout, prêt à encaisser.</p>
+        </div>
+        <div class="plans">
+          <article class="plan">
+            <div class="plan-paper">
+              <h3 data-i18n="p.1.t">Épicerie</h3>
+              <p class="plan-for" data-i18n="p.1.f">Épiceries, supérettes, alimentations générales</p>
+              <p class="price"><span class="amount">890</span><span class="cur">DT</span></p>
+              <p class="price-note" data-i18n="p.once">Logiciel · paiement unique · 1 poste</p>
+              <ul class="stars">
+                <li data-i18n="p.1.1">Catalogues prêts : épicerie, grande surface, pâtisserie</li>
+                <li data-i18n="p.1.2">Douchette, vente au kilo, montant à rendre</li>
+                <li data-i18n="p.1.3">Import Excel avec essai à blanc</li>
+                <li data-i18n="p.1.4">Étiquettes code-barres EAN-13</li>
+                <li data-i18n="p.1.5">Inventaire et dates de péremption</li>
+                <li data-i18n="p.inc">Installation, formation, 12 mois d'assistance</li>
+              </ul>
+              <a class="btn btn-line" href="#" data-wa="epicerie" target="_blank" rel="noopener" data-i18n="p.cta">Choisir cette offre</a>
+            </div>
+          </article>
+          <article class="plan">
+            <div class="plan-paper">
+              <h3 data-i18n="p.2.t">Café</h3>
+              <p class="plan-for" data-i18n="p.2.f">Cafés, salons de thé, buvettes</p>
+              <p class="price"><span class="amount">980</span><span class="cur">DT</span></p>
+              <p class="price-note" data-i18n="p.once">Logiciel · paiement unique · 1 poste</p>
+              <ul class="stars">
+                <li data-i18n="p.2.1">Plan de salle et terrasse</li>
+                <li data-i18n="p.2.2">Serveurs et ventes par serveur</li>
+                <li data-i18n="p.2.3">Ticket bar sans prix</li>
+                <li data-i18n="p.2.4">Addition partagée</li>
+                <li data-i18n="p.2.5">Carte café prête, boissons épinglées</li>
+                <li data-i18n="p.inc">Installation, formation, 12 mois d'assistance</li>
+              </ul>
+              <a class="btn btn-line" href="#" data-wa="cafe" target="_blank" rel="noopener" data-i18n="p.cta">Choisir cette offre</a>
+            </div>
+          </article>
+          <article class="plan plan-main">
+            <p class="plan-flag" data-i18n="p.flag">Le plus complet</p>
+            <div class="plan-paper">
+              <h3 data-i18n="p.3.t">Restaurant</h3>
+              <p class="plan-for" data-i18n="p.3.f">Restaurants, fast-foods, pizzerias</p>
+              <p class="price"><span class="amount">1 290</span><span class="cur">DT</span></p>
+              <p class="price-note" data-i18n="p.once">Logiciel · paiement unique · 1 poste</p>
+              <ul class="stars">
+                <li data-i18n="p.3.1">Tout le module Café inclus</li>
+                <li data-i18n="p.3.2">Ticket cuisine et ticket bar</li>
+                <li data-i18n="p.3.3">Chaque famille vers son imprimante</li>
+                <li data-i18n="p.3.4">Carte tunisienne prête : 39 plats</li>
+                <li data-i18n="p.3.5">Prix rapides sur toute la carte</li>
+                <li data-i18n="p.inc">Installation, formation, 12 mois d'assistance</li>
+              </ul>
+              <a class="btn btn-red" href="#" data-wa="restaurant" target="_blank" rel="noopener" data-i18n="p.cta">Choisir cette offre</a>
+            </div>
+          </article>
+        </div>
+        <div class="extras">
+          <p data-i18n-html="p.x1"><strong>Après la première année :</strong> assistance et mises à jour à 290 DT par an, si vous le souhaitez. La caisse continue de fonctionner sans.</p>
+          <p data-i18n-html="p.x2"><strong>Pack matériel :</strong> écran tactile, imprimante ticket 80 mm, tiroir-caisse, douchette, livrés et branchés avec TunisPOS. Prix selon votre configuration. <a href="#materiel">Voir le pack</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!--SEO-ARTICLE-->
+
+    <!-- FAQ -->
+    <section class="section faq" id="questions">
+      <div class="wrap faq-grid">
+        <div class="section-head">
+          <h2 data-i18n="q.title">Vos questions, nos réponses.</h2>
+          <p data-i18n="q.lede">Une autre question ? Écrivez-nous sur WhatsApp, on répond en français ou en arabe.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary data-i18n="q.1.q">Faut-il une connexion internet ?</summary>
+            <p data-i18n="q.1.a">Non. TunisPOS s'installe sur le PC de la boutique et fonctionne hors ligne. Vos ventes et vos données restent chez vous.</p>
+          </details>
+          <details>
+            <summary data-i18n="q.2.q">De quel matériel ai-je besoin ?</summary>
+            <p data-i18n="q.2.a">Rien, si vous prenez notre pack : écran tactile, imprimante ticket 80 mm, tiroir-caisse et douchette, livrés avec TunisPOS déjà installé. Vous avez déjà un PC sous Windows 10 ou 11 (64 bits) et une imprimante ticket ? On installe aussi sur votre matériel.</p>
+          </details>
+          <details>
+            <summary data-i18n="q.3.q">Mes caissiers parlent arabe, ça marche ?</summary>
+            <p data-i18n="q.3.a">Oui. L'interface existe en arabe, en français et en anglais, et on passe de l'une à l'autre en un clic.</p>
+          </details>
+          <details>
+            <summary data-i18n="q.4.q">J'ai déjà ma liste de produits dans Excel.</summary>
+            <p data-i18n="q.4.a">Parfait. L'import lit vos fichiers Excel ou CSV, fait d'abord un essai à blanc qui montre chaque erreur, puis crée seulement ce qui manque. Relancer le même fichier n'ajoute rien en double.</p>
+          </details>
+          <details>
+            <summary data-i18n="q.5.q">Comment éviter les annulations abusives ?</summary>
+            <p data-i18n="q.5.a">Une annulation ou une remise demande le code personnel d'un responsable, et chaque action est inscrite au journal avec son auteur et l'heure. Le caissier ne voit pas les rapports.</p>
+          </details>
+          <details>
+            <summary data-i18n="q.6.q">Et si le PC tombe en panne ?</summary>
+            <p data-i18n="q.6.a">La sauvegarde automatique sur clé USB garde quatorze copies. On réinstalle sur un autre PC et on restaure la dernière sauvegarde.</p>
+          </details>
+          <details>
+            <summary data-i18n="q.7.q">TunisPOS remplace-t-il la caisse fiscale NACEF ?</summary>
+            <p data-i18n="q.7.a">Pas à ce jour : TunisPOS n'est pas une caisse homologuée NACEF. Si votre établissement sert sur place et doit utiliser une caisse fiscale, demandez à votre comptable ce qui s'applique à vous, et parlons-en avant d'acheter.</p>
+          </details>
+          <details>
+            <summary data-i18n="q.8.q">Que se passe-t-il après les douze mois ?</summary>
+            <p data-i18n="q.8.a">Votre licence ne s'arrête pas. Vous pouvez prolonger l'assistance et les mises à jour pour 290 DT par an, ou continuer sans.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final">
+      <div class="wrap final-inner">
+        <h2 data-i18n="z.title">Voyez votre caisse tourner avant de payer.</h2>
+        <p data-i18n="z.lede">Dites-nous votre métier : on vous prépare une démo avec votre carte ou vos produits.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-wa" href="#" data-wa="demo" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n="z.cta1">Écrire sur WhatsApp</span></a>
+          <a class="btn btn-ghost" href="#" data-mail><svg aria-hidden="true"><use href="#i-mail"/></svg><span data-i18n="z.cta2">Envoyer un e-mail</span></a>
+        </div>
+        <p class="contact-line"><span dir="ltr" data-phone-text></span> · <span data-mail-text></span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="#top"><img src="assets/img/icon.svg" alt="" width="30" height="30"><span>Tunis<b>POS</b></span></a>
+        <p lang="en">Smart Retail. Tunisian Touch.</p>
+        <p class="footer-about" data-i18n="footer.about">Logiciel de caisse tunisien pour cafés, restaurants et épiceries. Livré avec le matériel, installé et branché.</p>
+      </div>
+      <nav class="footer-links footer-trades" aria-label="Logiciel de caisse par métier" data-i18n-aria="footer.trades">
+        <a href="logiciel-caisse-cafe/" data-i18n="footer.cafe">Caisse café</a>
+        <a href="logiciel-caisse-restaurant/" data-i18n="footer.resto">Caisse restaurant</a>
+        <a href="logiciel-caisse-epicerie/" data-i18n="footer.epi">Caisse épicerie</a>
+      </nav>
+      <nav class="footer-links" aria-label="Pied de page" data-i18n-aria="footer.aria">
+        <a href="#metiers" data-i18n="nav.modules">Modules</a>
+        <a href="#tarifs" data-i18n="nav.pricing">Tarifs</a>
+        <a href="#questions" data-i18n="nav.faq">Questions</a>
+        <a href="#captures" data-i18n="nav.shots">Captures</a>
+      </nav>
+      <p class="copy">© <span data-year>2026</span> TunisPOS</p>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="#" data-wa="demo" target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp" data-i18n-aria="z.cta1"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+
+  <dialog class="lightbox" aria-label="Capture d'écran agrandie">
+    <img src="" alt="">
+    <button type="button" class="lightbox-close" aria-label="Fermer" data-i18n-aria="close">×</button>
+  </dialog>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/motion.js" defer></script>
+  <script src="assets/js/demo.js" defer></script>
+</body>
+</html>

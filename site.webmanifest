@@ -1,0 +1,13 @@
+{
+  "name": "TunisPOS · Logiciel de caisse tunisien",
+  "short_name": "TunisPOS",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#102A43",
+  "theme_color": "#102A43",
+  "lang": "fr",
+  "icons": [
+    { "src": "assets/img/icon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
