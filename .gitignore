@@ -6,3 +6,4 @@ Thumbs.db
 .env*
 
 .vercel
+.playwright-mcp/
