@@ -27,4 +27,4 @@ npx serve .
 
 ## Deploy
 
-Every push to `main` deploys to production on Vercel.
+Hosted on GitHub Pages: https://nidhalbouaziz.github.io/TunisPOS/ . Every push to `main` redeploys it.
