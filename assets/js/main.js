@@ -14,14 +14,16 @@
   var WA_MSG = {
     fr: {
       demo: 'Bonjour, je souhaite une démo de TunisPOS.',
-      epicerie: 'Bonjour, je suis intéressé par TunisPOS Épicerie (690 DT).',
+      epicerie: 'Bonjour, je suis intéressé par TunisPOS Épicerie (890 DT).',
+      pack: 'Bonjour, je voudrais le prix du pack TunisPOS avec le matériel (écran tactile, imprimante, tiroir-caisse).',
       cafe: 'Bonjour, je suis intéressé par TunisPOS Café (890 DT).',
       restaurant: 'Bonjour, je suis intéressé par TunisPOS Restaurant (1 190 DT).',
       mailSubject: 'TunisPOS : demande de démo'
     },
     ar: {
       demo: 'مرحبًا، أرغب في عرض تجريبي لبرنامج TunisPOS.',
-      epicerie: 'مرحبًا، أنا مهتم بعرض TunisPOS بقالة (690 دينار).',
+      epicerie: 'مرحبًا، أنا مهتم بعرض TunisPOS بقالة (890 دينار).',
+      pack: 'مرحبًا، أريد سعر حزمة TunisPOS مع المعدات (شاشة لمس، طابعة، درج نقود).',
       cafe: 'مرحبًا، أنا مهتم بعرض TunisPOS مقهى (890 دينار).',
       restaurant: 'مرحبًا، أنا مهتم بعرض TunisPOS مطعم (1190 دينار).',
       mailSubject: 'TunisPOS: طلب عرض تجريبي'
@@ -45,7 +47,24 @@
     'hero.lede': 'TunisPOS يشغّل المقاهي والمطاعم والبقالات: الطاولات والنُدُل، تذكرة المطبخ، الباركود والمخزون. دون إنترنت، بالعربية والفرنسية.',
     'hero.cta1': 'اطلب عرضًا تجريبيًا على واتساب',
     'hero.cta2': 'شاهد الأسعار',
-    'hero.note': 'عرض تجريبي مجاني ودون التزام. التثبيت والتكوين مشمولان.',
+    'hero.note': 'عرض تجريبي مجاني ودون التزام. يُسلَّم مع المعدات، مثبّتًا وموصولًا.',
+    'nav.hw': 'المعدات',
+    'hw.title': 'البرنامج والمعدات، ونركّب لك كل شيء.',
+    'hw.lede': 'يصلك TunisPOS مثبّتًا على حزمة كاملة. يوم الافتتاح، تشغّل الجهاز وتبدأ البيع.',
+    'hw.aria': 'اعرض الحزمة حسب المهنة',
+    'hw.scene': 'حزمة TunisPOS: شاشة لمس تعرض البرنامج، طابعة تذاكر، درج نقود وقارئ باركود',
+    'hw.1.t': 'شاشة لمس',
+    'hw.1.d': 'صندوق TunisPOS بلمسة إصبع، واضح من بعيد.',
+    'hw.2.t': 'طابعة تذاكر 80 مم',
+    'hw.2.s': 'طابعة 80 مم',
+    'hw.2.d': 'تذاكر الحرفاء والبار والمطبخ.',
+    'hw.3.t': 'درج نقود',
+    'hw.3.d': 'الأوراق والقطع مرتّبة، تحت القفل.',
+    'hw.4.t': 'قارئ باركود',
+    'hw.4.s': 'قارئ باركود',
+    'hw.4.d': 'نقرة واحدة، والمنتج في الصندوق.',
+    'hw.cta': 'اطلب سعر الحزمة',
+    'hw.note': 'السعر حسب تجهيزك: طابعة أو أكثر، قارئ باركود، درج نقود.',
     'hero.visual': 'معاينة صندوق TunisPOS في وضع المقهى',
     'f1.t': 'يعمل دون إنترنت',
     'f1.d': 'مثبّت على حاسوبك بنظام Windows. انقطاع الشبكة لا يوقف الصندوق أبدًا.',
@@ -114,8 +133,8 @@
     's.4.t': 'ابدأ البيع',
     's.4.d': 'ونبقى في الخدمة: اثنا عشر شهرًا من الدعم والتحديثات مشمولة.',
     'p.title': 'سعر واضح، يُدفع مرة واحدة.',
-    'p.lede': 'رخصة لصندوق واحد، مع التثبيت والتكوين. لا اشتراك إجباري.',
-    'p.once': 'دفعة واحدة · صندوق واحد',
+    'p.lede': 'سعر البرنامج لصندوق واحد، مع التثبيت والتكوين. أضف حزمة المعدات: نوصل لك كل شيء جاهزًا للبيع.',
+    'p.once': 'البرنامج · دفعة واحدة · صندوق واحد',
     'p.inc': 'التثبيت، التكوين، 12 شهرًا من الدعم',
     'p.cta': 'اختر هذا العرض',
     'p.flag': 'الأكثر اكتمالًا',
@@ -141,13 +160,13 @@
     'p.3.4': 'قائمة تونسية جاهزة: 39 طبقًا',
     'p.3.5': 'أسعار سريعة لكامل القائمة',
     'p.x1': '<strong>بعد السنة الأولى:</strong> الدعم والتحديثات بـ290 دينارًا في السنة، إن رغبت. الصندوق يواصل العمل دونها.',
-    'p.x2': '<strong>حزمة المعدات:</strong> شاشة لمس، طابعة تذاكر 80 مم، درج نقود، قارئ باركود. السعر حسب الطلب، أو نثبّت على معداتك.',
+    'p.x2': '<strong>حزمة المعدات:</strong> شاشة لمس، طابعة تذاكر 80 مم، درج نقود، قارئ باركود، تُسلَّم وتُركَّب مع TunisPOS. السعر حسب تجهيزك. <a href="#materiel">شاهد الحزمة</a>',
     'q.title': 'أسئلتكم وأجوبتنا.',
     'q.lede': 'سؤال آخر؟ راسلنا على واتساب، نجيب بالعربية أو بالفرنسية.',
     'q.1.q': 'هل يلزم اتصال بالإنترنت؟',
     'q.1.a': 'لا. يُثبَّت TunisPOS على حاسوب المحل ويعمل دون اتصال. مبيعاتك وبياناتك تبقى عندك.',
     'q.2.q': 'ما المعدات التي أحتاجها؟',
-    'q.2.a': 'حاسوب بنظام Windows 10 أو 11 (64 بت)، طابعة تذاكر 80 مم أو 58 مم، وحسب مهنتك قارئ باركود ودرج نقود. يمكننا أيضًا توفير حزمة كاملة.',
+    'q.2.a': 'لا شيء، إذا اخترت حزمتنا: شاشة لمس، طابعة تذاكر 80 مم، درج نقود وقارئ باركود، تُسلَّم مع TunisPOS مثبّتًا. لديك حاسوب بنظام Windows 10 أو 11 (64 بت) وطابعة تذاكر؟ نثبّت أيضًا على معداتك.',
     'q.3.q': 'الكاشير عندي يتكلم العربية، هل يناسبه؟',
     'q.3.a': 'نعم. الواجهة متوفرة بالعربية والفرنسية والإنجليزية، وتنتقل بينها بنقرة واحدة.',
     'q.4.q': 'لديّ قائمة منتجاتي في Excel.',
@@ -227,8 +246,23 @@
   }
 
   // ---- Tabs ----
+  // ---- Hardware scene: the terminal shows the chosen trade's real screen ----
+  var scene = document.querySelector('.hw-scene');
+  var hwButtons = Array.prototype.slice.call(document.querySelectorAll('[data-hw]'));
+  function setScene(name) {
+    if (!scene || scene.dataset.scene === name) return;
+    scene.dataset.scene = name;
+    scene.querySelectorAll('[data-screen]').forEach(function (img) { img.classList.toggle('on', img.dataset.screen === name); });
+    hwButtons.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.hw === name ? 'true' : 'false'); });
+    scene.classList.remove('printing');
+    void scene.offsetWidth; // restart the ticket animation
+    scene.classList.add('printing');
+  }
+  hwButtons.forEach(function (b) { b.addEventListener('click', function () { setScene(b.dataset.hw); }); });
+
   var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
   function selectTab(name, focus) {
+    setScene(name);
     tabs.forEach(function (t) {
       var on = t.dataset.tab === name;
       t.setAttribute('aria-selected', on ? 'true' : 'false');

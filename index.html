@@ -34,7 +34,7 @@
     "inLanguage": ["fr", "ar", "en"],
     "description": "Logiciel de caisse pour cafés, restaurants et épiceries en Tunisie.",
     "offers": [
-      {"@type": "Offer", "name": "TunisPOS Épicerie", "price": "690", "priceCurrency": "TND"},
+      {"@type": "Offer", "name": "TunisPOS Épicerie", "price": "890", "priceCurrency": "TND"},
       {"@type": "Offer", "name": "TunisPOS Café", "price": "890", "priceCurrency": "TND"},
       {"@type": "Offer", "name": "TunisPOS Restaurant", "price": "1190", "priceCurrency": "TND"}
     ]
@@ -73,6 +73,7 @@
         <a href="#metiers" data-tab-link="cafe" data-i18n="nav.cafe">Café</a>
         <a href="#metiers" data-tab-link="restaurant" data-i18n="nav.restaurant">Restaurant</a>
         <a href="#metiers" data-tab-link="epicerie" data-i18n="nav.epicerie">Épicerie</a>
+        <a href="#materiel" data-i18n="nav.hw">Matériel</a>
         <a href="#tarifs" data-i18n="nav.pricing">Tarifs</a>
         <a href="#questions" data-i18n="nav.faq">Questions</a>
         <button class="lang-btn" type="button" data-lang-toggle lang="ar">العربية</button>
@@ -95,7 +96,7 @@
             <a class="btn btn-wa" href="#" data-wa="demo" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n="hero.cta1">Demander une démo sur WhatsApp</span></a>
             <a class="btn btn-ghost" href="#tarifs" data-i18n="hero.cta2">Voir les tarifs</a>
           </div>
-          <p class="hero-note" data-i18n="hero.note">Démo gratuite, sans engagement. Installation et formation comprises.</p>
+          <p class="hero-note" data-i18n="hero.note">Démo gratuite, sans engagement. Livré avec le matériel, installé et branché.</p>
         </div>
 
         <div class="hero-visual" aria-label="Aperçu de la caisse TunisPOS en mode café" role="img" data-i18n-aria="hero.visual">
@@ -345,20 +346,106 @@
       </div>
     </section>
 
+    <!-- HARDWARE -->
+    <section class="section hardware" id="materiel">
+      <div class="wrap hw-grid">
+        <div class="hw-copy">
+          <h2 data-i18n="hw.title">Le logiciel, le matériel, et on branche tout.</h2>
+          <p class="hw-lede" data-i18n="hw.lede">TunisPOS arrive installé sur un pack complet. Le jour de l'ouverture, vous allumez et vous encaissez.</p>
+          <div class="hw-switch" role="group" aria-label="Voir le pack pour un métier" data-i18n-aria="hw.aria">
+            <button type="button" aria-pressed="true" data-hw="cafe" data-i18n="m.t1">Café</button>
+            <button type="button" aria-pressed="false" data-hw="restaurant" data-i18n="m.t2">Restaurant</button>
+            <button type="button" aria-pressed="false" data-hw="epicerie" data-i18n="nav.epicerie">Épicerie</button>
+          </div>
+          <ul class="hw-list">
+            <li><strong data-i18n="hw.1.t">Écran tactile</strong><span data-i18n="hw.1.d">La caisse TunisPOS, au doigt, lisible de loin.</span></li>
+            <li><strong data-i18n="hw.2.t">Imprimante ticket 80 mm</strong><span data-i18n="hw.2.d">Tickets clients, bar et cuisine.</span></li>
+            <li><strong data-i18n="hw.3.t">Tiroir-caisse</strong><span data-i18n="hw.3.d">Billets et pièces rangés, sous clé.</span></li>
+            <li><strong data-i18n="hw.4.t">Douchette code-barres</strong><span data-i18n="hw.4.d">Un bip, et l'article est en caisse.</span></li>
+          </ul>
+          <a class="btn btn-wa" href="#" data-wa="pack" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n="hw.cta">Demander le prix du pack</span></a>
+          <p class="hw-note" data-i18n="hw.note">Prix selon votre configuration : une ou plusieurs imprimantes, douchette, tiroir.</p>
+        </div>
+
+        <div class="hw-scene" data-scene="cafe" role="img" aria-label="Pack TunisPOS : écran tactile affichant le logiciel, imprimante ticket, tiroir-caisse et douchette" data-i18n-aria="hw.scene">
+          <div class="hw-glow" aria-hidden="true"></div>
+
+          <svg class="hw-drawer" viewBox="0 0 660 150" aria-hidden="true">
+            <defs><linearGradient id="hw-dr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#323b47"/><stop offset="1" stop-color="#1b2129"/></linearGradient></defs>
+            <path d="M24 0h612l24 30H0z" fill="#3f4a58"/>
+            <rect x="0" y="30" width="660" height="120" rx="6" fill="url(#hw-dr)"/>
+            <rect x="18" y="44" width="624" height="92" rx="5" fill="none" stroke="#3f4a58" stroke-width="2"/>
+            <rect x="240" y="74" width="180" height="16" rx="8" fill="#10141a"/>
+            <circle cx="602" cy="64" r="9" fill="#b3bec9"/><rect x="600" y="58" width="4" height="12" rx="1" fill="#59636f"/>
+          </svg>
+
+          <div class="hw-terminal" aria-hidden="true">
+            <div class="hw-bezel">
+              <div class="hw-display">
+                <img data-screen="cafe" class="on" src="assets/img/screens/cafe-caisse.png" alt="" width="1366" height="768">
+                <img data-screen="restaurant" src="assets/img/screens/tables.png" alt="" width="1366" height="768" loading="lazy">
+                <img data-screen="epicerie" src="assets/img/screens/epicerie-caisse.png" alt="" width="1366" height="768" loading="lazy">
+                <span class="hw-glare"></span>
+              </div>
+              <span class="hw-chin"><svg><use href="#i-star"/></svg></span>
+            </div>
+            <svg class="hw-stand" viewBox="0 0 600 130">
+              <path d="M262 0h76l24 100H238z" fill="#232a33"/>
+              <path d="M262 0h20l-8 100h-36z" fill="#2d3540"/>
+              <rect x="140" y="94" width="320" height="32" rx="16" fill="#2b333e"/>
+              <rect x="164" y="97" width="272" height="6" rx="3" fill="#3e4956"/>
+            </svg>
+          </div>
+
+          <div class="hw-printer" aria-hidden="true">
+            <div class="hw-ticket">
+              <div class="hw-paper">
+                <div data-t="cafe"><b>TABLE T5 · SAMI</b><p><span>2× Express</span><span>3,600</span></p><p><span>1× Thé menthe</span><span>1,200</span></p><p><span>2× Croissant</span><span>2,600</span></p><p class="tt"><span>TOTAL</span><span>7,400</span></p></div>
+                <div data-t="restaurant"><b>CUISINE · T5</b><p><span>1× Lablabi</span></p><p><span>2× Brik à l'œuf</span></p><p><span>1× Couscous poulet</span></p><p><span>1× Ojja merguez</span></p></div>
+                <div data-t="epicerie"><b>ÉPICERIE YASMINE</b><p><span>Huile d'olive 1 L</span><span>18,500</span></p><p><span>Café moulu</span><span>6,900</span></p><p><span>Sucre 1 kg</span><span>2,300</span></p><p class="tt"><span>TOTAL</span><span>27,700</span></p></div>
+              </div>
+            </div>
+            <svg viewBox="0 0 240 200">
+              <path d="M20 72Q20 40 52 40h136q32 0 32 32v118q0 10-10 10H30q-10 0-10-10z" fill="#2a313b"/>
+              <path d="M30 54q4-10 24-10h132q20 0 24 10l6 44H24z" fill="#3b4551"/>
+              <rect x="50" y="50" width="140" height="7" rx="3.5" fill="#0c1015"/>
+              <rect x="20" y="98" width="200" height="3" fill="#1a1f26"/>
+              <rect x="40" y="152" width="48" height="16" rx="8" fill="#1a1f26"/>
+              <circle cx="192" cy="160" r="5.5" fill="#35e07f"/>
+            </svg>
+          </div>
+
+          <svg class="hw-scanner" viewBox="0 0 340 170" aria-hidden="true">
+            <defs><linearGradient id="hw-beam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff3347" stop-opacity=".55"/><stop offset="1" stop-color="#ff3347" stop-opacity="0"/></linearGradient></defs>
+            <path class="hw-beam" d="M204 32 330 4v104L198 62z" fill="url(#hw-beam)"/>
+            <path d="M10 32q0-22 22-22h118l52 12q10 3 7 15l-9 32q-3 11-15 11h-73l-15 70q-2 10-13 10H64q-11 0-9-11l13-69H32q-22 0-22-22z" fill="#232a33"/>
+            <path d="M24 20h120l40 9" stroke="#3a4450" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <path d="M199 27l9 6-9 31-10-2z" fill="#E21B2D"/>
+            <path d="M104 80q10 16-2 30" stroke="#E21B2D" stroke-width="7" fill="none" stroke-linecap="round"/>
+          </svg>
+
+          <span class="hw-chip chip-screen" data-i18n="hw.1.t">Écran tactile</span>
+          <span class="hw-chip chip-printer" data-i18n="hw.2.s">Imprimante 80 mm</span>
+          <span class="hw-chip chip-drawer" data-i18n="hw.3.t">Tiroir-caisse</span>
+          <span class="hw-chip chip-scanner" data-i18n="hw.4.s">Douchette</span>
+        </div>
+      </div>
+    </section>
+
     <!-- PRICING -->
     <section class="section pricing" id="tarifs">
       <div class="wrap">
         <div class="section-head">
           <h2 data-i18n="p.title">Un prix clair, payé une fois.</h2>
-          <p data-i18n="p.lede">Licence pour un poste de caisse, installation et formation comprises. Pas d'abonnement obligatoire.</p>
+          <p data-i18n="p.lede">Le prix du logiciel pour un poste, installation et formation comprises. Ajoutez le pack matériel : on livre tout, prêt à encaisser.</p>
         </div>
         <div class="plans">
           <article class="plan">
             <div class="plan-paper">
               <h3 data-i18n="p.1.t">Épicerie</h3>
               <p class="plan-for" data-i18n="p.1.f">Épiceries, supérettes, alimentations générales</p>
-              <p class="price"><span class="amount">690</span><span class="cur">DT</span></p>
-              <p class="price-note" data-i18n="p.once">Paiement unique · 1 poste</p>
+              <p class="price"><span class="amount">890</span><span class="cur">DT</span></p>
+              <p class="price-note" data-i18n="p.once">Logiciel · paiement unique · 1 poste</p>
               <ul class="stars">
                 <li data-i18n="p.1.1">Catalogues prêts : épicerie, grande surface, pâtisserie</li>
                 <li data-i18n="p.1.2">Douchette, vente au kilo, montant à rendre</li>
@@ -375,7 +462,7 @@
               <h3 data-i18n="p.2.t">Café</h3>
               <p class="plan-for" data-i18n="p.2.f">Cafés, salons de thé, buvettes</p>
               <p class="price"><span class="amount">890</span><span class="cur">DT</span></p>
-              <p class="price-note" data-i18n="p.once">Paiement unique · 1 poste</p>
+              <p class="price-note" data-i18n="p.once">Logiciel · paiement unique · 1 poste</p>
               <ul class="stars">
                 <li data-i18n="p.2.1">Plan de salle et terrasse</li>
                 <li data-i18n="p.2.2">Serveurs et ventes par serveur</li>
@@ -393,7 +480,7 @@
               <h3 data-i18n="p.3.t">Restaurant</h3>
               <p class="plan-for" data-i18n="p.3.f">Restaurants, fast-foods, pizzerias</p>
               <p class="price"><span class="amount">1 190</span><span class="cur">DT</span></p>
-              <p class="price-note" data-i18n="p.once">Paiement unique · 1 poste</p>
+              <p class="price-note" data-i18n="p.once">Logiciel · paiement unique · 1 poste</p>
               <ul class="stars">
                 <li data-i18n="p.3.1">Tout le module Café inclus</li>
                 <li data-i18n="p.3.2">Ticket cuisine et ticket bar</li>
@@ -408,7 +495,7 @@
         </div>
         <div class="extras">
           <p data-i18n-html="p.x1"><strong>Après la première année :</strong> assistance et mises à jour à 290 DT par an, si vous le souhaitez. La caisse continue de fonctionner sans.</p>
-          <p data-i18n-html="p.x2"><strong>Pack matériel :</strong> écran tactile, imprimante ticket 80 mm, tiroir-caisse, douchette. Prix sur devis, ou on installe sur votre matériel.</p>
+          <p data-i18n-html="p.x2"><strong>Pack matériel :</strong> écran tactile, imprimante ticket 80 mm, tiroir-caisse, douchette, livrés et branchés avec TunisPOS. Prix selon votre configuration. <a href="#materiel">Voir le pack</a></p>
         </div>
       </div>
     </section>
@@ -427,7 +514,7 @@
           </details>
           <details>
             <summary data-i18n="q.2.q">De quel matériel ai-je besoin ?</summary>
-            <p data-i18n="q.2.a">Un PC sous Windows 10 ou 11 (64 bits), une imprimante ticket 80 mm ou 58 mm, et selon votre métier une douchette code-barres et un tiroir-caisse. On peut aussi vous fournir un pack complet.</p>
+            <p data-i18n="q.2.a">Rien, si vous prenez notre pack : écran tactile, imprimante ticket 80 mm, tiroir-caisse et douchette, livrés avec TunisPOS déjà installé. Vous avez déjà un PC sous Windows 10 ou 11 (64 bits) et une imprimante ticket ? On installe aussi sur votre matériel.</p>
           </details>
           <details>
             <summary data-i18n="q.3.q">Mes caissiers parlent arabe, ça marche ?</summary>
