@@ -49,6 +49,13 @@
     'hero.cta2': 'شاهد الأسعار',
     'hero.note': 'عرض تجريبي مجاني ودون التزام. يُسلَّم مع المعدات، مثبّتًا وموصولًا.',
     'nav.hw': 'المعدات',
+    'tk.pause': 'إيقاف الشريط المتحرك',
+    'tk.play': 'تشغيل الشريط المتحرك',
+    'db.title': 'TunisPOS بالأرقام',
+    'db.1': 'منتجًا جاهزًا للبيع منذ التثبيت',
+    'db.2': 'طبقًا تونسيًا موجودًا في القائمة',
+    'db.3': 'دينار اشتراك إجباري',
+    'db.4': 'نسخة احتياطية محفوظة على مفتاح USB',
     'hw.title': 'البرنامج والمعدات، ونركّب لك كل شيء.',
     'hw.lede': 'يصلك TunisPOS مثبّتًا على حزمة كاملة. يوم الافتتاح، تشغّل الجهاز وتبدأ البيع.',
     'hw.aria': 'اعرض الحزمة حسب المهنة',
@@ -229,7 +236,9 @@
     });
     updateContactLinks();
     store('tunispos-lang', lang);
+    document.dispatchEvent(new CustomEvent('tunispos:lang', { detail: lang }));
   }
+  window.TunisPOS = { setScene: function (n) { setScene(n); }, getLang: function () { return lang; }, frText: function (k) { return FR['t:' + k]; }, arText: function (k) { return AR[k]; } };
 
   function waHref(kind) {
     var msg = (WA_MSG[lang] && WA_MSG[lang][kind]) || WA_MSG[lang].demo;

@@ -23,6 +23,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Readex+Pro:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/motion.css">
+  <script>if (matchMedia("(prefers-reduced-motion: no-preference)").matches) document.documentElement.classList.add("js-motion");</script>
 
   <script type="application/ld+json">
   {
@@ -82,6 +84,7 @@
         </a>
       </nav>
     </div>
+    <div class="scroll-progress" aria-hidden="true"></div>
   </header>
 
   <main id="main">
@@ -109,14 +112,14 @@
             </div>
             <div class="till-body">
               <div class="till-grid">
-                <div class="tile"><svg style="color:#6b3f1d"><use href="#i-cup"/></svg><b>Express</b><em>1,800 TND</em></div>
+                <div class="tile" data-tap="1"><svg style="color:#6b3f1d"><use href="#i-cup"/></svg><b>Express</b><em>1,800 TND</em></div>
                 <div class="tile"><svg style="color:#6b3f1d"><use href="#i-cup"/></svg><b>Capucin</b><em>2,000 TND</em></div>
                 <div class="tile"><svg style="color:#6b3f1d"><use href="#i-cup"/></svg><b>Direct</b><em>2,200 TND</em></div>
-                <div class="tile"><svg style="color:#2f6b3a;--fill:#cfe8c9"><use href="#i-glass"/></svg><b>Thé à la menthe</b><em>1,200 TND</em></div>
-                <div class="tile tile-hit"><svg style="color:#8a6a00;--fill:#fbe7a1"><use href="#i-glass"/></svg><b>Citronnade</b><em>3,000 TND</em></div>
+                <div class="tile" data-tap="2"><svg style="color:#2f6b3a;--fill:#cfe8c9"><use href="#i-glass"/></svg><b>Thé à la menthe</b><em>1,200 TND</em></div>
+                <div class="tile tile-hit" data-tap="4"><svg style="color:#8a6a00;--fill:#fbe7a1"><use href="#i-glass"/></svg><b>Citronnade</b><em>3,000 TND</em></div>
                 <div class="tile"><svg style="color:#a3480c;--fill:#ffcf99"><use href="#i-glass"/></svg><b>Jus d'orange</b><em>3,500 TND</em></div>
                 <div class="tile"><svg style="color:#2b5a8a"><use href="#i-bottle"/></svg><b>Eau 0,5 L</b><em>1,000 TND</em></div>
-                <div class="tile"><svg style="color:#8a5a12"><use href="#i-croissant"/></svg><b>Croissant</b><em>1,300 TND</em></div>
+                <div class="tile" data-tap="3"><svg style="color:#8a5a12"><use href="#i-croissant"/></svg><b>Croissant</b><em>1,300 TND</em></div>
                 <div class="tile"><svg style="color:#6b3f1d"><use href="#i-cup"/></svg><b>Café crème</b><em>2,800 TND</em></div>
               </div>
               <div class="till-cart">
@@ -125,7 +128,7 @@
                 <div class="cart-line"><span>1 × Thé menthe</span><span>1,200</span></div>
                 <div class="cart-line"><span>2 × Croissant</span><span>2,600</span></div>
                 <div class="cart-line cart-new"><span>1 × Citronnade</span><span>3,000</span></div>
-                <div class="cart-total"><span>Total</span><strong>10,400</strong></div>
+                <div class="cart-total"><span>Total</span><strong data-count-to="10400">10,400</strong></div>
                 <div class="cart-pay">Payer</div>
               </div>
             </div>
@@ -165,6 +168,16 @@
       </ul>
     </section>
 
+    <!-- TICKER -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <ul class="ticker-list">
+          <li><b>Express</b> 1,800 TND</li><li><b>Capucin</b> 2,000 TND</li><li><b>Brik à l'œuf</b> 3,500 TND</li><li><b>Huile d'olive 1 L</b> 18,500 TND</li><li><b>Thé à la menthe</b> 1,200 TND</li><li><b>Salade tunisienne</b> 6,000 TND</li><li><b>Café moulu 250 g</b> 6,900 TND</li><li><b>Citronnade</b> 3,000 TND</li><li><b>Escalope panée</b> 16,000 TND</li><li><b>Lait demi-écrémé 1 L</b> 1,450 TND</li><li><b>Sandwich tunisien</b> 6,000 TND</li><li><b>Croissant</b> 1,300 TND</li><li><b>Sucre blanc 1 kg</b> 2,300 TND</li><li><b>Jus d'orange pressé</b> 3,500 TND</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ticker-ctl"><button type="button" class="ticker-pause" aria-pressed="false" data-i18n="tk.pause">Mettre en pause le défilement</button></div>
+
     <!-- METIERS -->
     <section class="section metiers" id="metiers">
       <div class="wrap">
@@ -174,6 +187,7 @@
         </div>
 
         <div class="tabs" role="tablist" aria-label="Métiers" data-i18n-aria="m.tabs">
+          <span class="tab-ind" aria-hidden="true"></span>
           <button role="tab" id="tab-cafe" aria-controls="panel-cafe" aria-selected="true" data-tab="cafe"><span data-i18n="m.t1">Café</span><small data-i18n="m.t1s">Tables, serveurs, ticket bar</small></button>
           <button role="tab" id="tab-restaurant" aria-controls="panel-restaurant" aria-selected="false" tabindex="-1" data-tab="restaurant"><span data-i18n="m.t2">Restaurant</span><small data-i18n="m.t2s">Carte, ticket cuisine, addition</small></button>
           <button role="tab" id="tab-epicerie" aria-controls="panel-epicerie" aria-selected="false" tabindex="-1" data-tab="epicerie"><span data-i18n="m.t3">Épicerie &amp; supérette</span><small data-i18n="m.t3s">Code-barres, catalogue, stock</small></button>
@@ -280,6 +294,19 @@
       </div>
     </section>
 
+    <!-- DISPLAY BAND -->
+    <section class="display-band" aria-labelledby="db-title">
+      <div class="wrap">
+        <h2 id="db-title" class="sr" data-i18n="db.title">TunisPOS en chiffres</h2>
+        <ul class="vfd-row" role="list">
+          <li class="vfd"><div class="vfd-screen"><span class="odo" data-odo="2 934">2 934</span></div><p data-i18n="db.1">articles prêts à vendre, dès l'installation</p></li>
+          <li class="vfd"><div class="vfd-screen"><span class="odo" data-odo="39">39</span></div><p data-i18n="db.2">plats tunisiens déjà sur la carte</p></li>
+          <li class="vfd"><div class="vfd-screen"><span class="odo" data-odo="0,000">0,000</span></div><p data-i18n="db.3">dinar d'abonnement obligatoire</p></li>
+          <li class="vfd"><div class="vfd-screen"><span class="odo" data-odo="14">14</span></div><p data-i18n="db.4">sauvegardes gardées sur clé USB</p></li>
+        </ul>
+      </div>
+    </section>
+
     <!-- ROLES -->
     <section class="section roles">
       <div class="wrap">
@@ -348,6 +375,7 @@
 
     <!-- HARDWARE -->
     <section class="section hardware" id="materiel">
+      <div class="hw-track"><div class="hw-sticky">
       <div class="wrap hw-grid">
         <div class="hw-copy">
           <h2 data-i18n="hw.title">Le logiciel, le matériel, et on branche tout.</h2>
@@ -357,6 +385,7 @@
             <button type="button" aria-pressed="false" data-hw="restaurant" data-i18n="m.t2">Restaurant</button>
             <button type="button" aria-pressed="false" data-hw="epicerie" data-i18n="nav.epicerie">Épicerie</button>
           </div>
+          <div class="hw-rail" aria-hidden="true"><span></span></div>
           <ul class="hw-list">
             <li><strong data-i18n="hw.1.t">Écran tactile</strong><span data-i18n="hw.1.d">La caisse TunisPOS, au doigt, lisible de loin.</span></li>
             <li><strong data-i18n="hw.2.t">Imprimante ticket 80 mm</strong><span data-i18n="hw.2.d">Tickets clients, bar et cuisine.</span></li>
@@ -430,6 +459,7 @@
           <span class="hw-chip chip-scanner" data-i18n="hw.4.s">Douchette</span>
         </div>
       </div>
+      </div></div>
     </section>
 
     <!-- PRICING -->
@@ -582,5 +612,6 @@
   </dialog>
 
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/motion.js" defer></script>
 </body>
 </html>
