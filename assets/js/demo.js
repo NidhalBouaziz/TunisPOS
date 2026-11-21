@@ -139,7 +139,6 @@
       } else {
         b.appendChild(el('b', null, item.n));
         b.appendChild(el('em', null, tnd(item.p) + (item.kg ? ' TND' + T.perKg : ' TND')));
-        b.setAttribute('aria-label', T.add + ' ' + item.n + ', ' + tnd(item.p) + ' TND' + (item.kg ? T.perKg : ''));
         b.addEventListener('click', function () { add(item, b); });
       }
       grid.appendChild(b);

@@ -19,8 +19,8 @@
   --mint-bg: #E5F3EA;
   --amber: #A86A12;
   --amber-bg: #FDF1DD;
-  --wa: #1FA855;
-  --wa-ink: #148043;
+  --wa: #15803D;
+  --wa-ink: #116932;
 
   --f-sans: "Readex Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
@@ -465,7 +465,7 @@ details p { padding: 0 0 24px; color: var(--slate); max-width: 62ch; }
 .wa-float {
   position: fixed; inset-inline-end: 20px; bottom: 20px; z-index: 40;
   width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center;
-  background: var(--wa); color: #fff; box-shadow: 0 10px 28px -6px rgba(20, 128, 67, .6);
+  background: var(--wa); color: #fff; box-shadow: 0 10px 28px -6px rgba(21, 128, 61, .6);
   transition: transform .2s, opacity .3s;
 }
 .wa-float:hover { transform: scale(1.06); }

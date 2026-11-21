@@ -133,8 +133,11 @@
   // ---- Pole displays: digits roll like a till display ----
   document.querySelectorAll('.odo').forEach(function (odo) {
     var value = odo.dataset.odo;
-    odo.setAttribute('aria-label', value);
     odo.textContent = '';
+    var spoken = document.createElement('span');
+    spoken.className = 'sr';
+    spoken.textContent = value;
+    odo.appendChild(spoken);
     var reels = [];
     value.split('').forEach(function (ch, i) {
       if (/\d/.test(ch)) {
