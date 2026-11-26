@@ -8,7 +8,7 @@ export const pages = [
     hreflang: true,
     title: 'Logiciel de caisse Tunisie : café, restaurant, épicerie | TunisPOS',
     ogTitle: 'TunisPOS · La caisse qui compte en millimes',
-    description: 'TunisPOS, logiciel de caisse tunisien livré avec le matériel : tables et ticket cuisine pour cafés et restaurants, code-barres et stock pour épiceries.'
+    description: 'TunisPOS, logiciel de caisse tunisien pour cafés, restaurants et épiceries. Prix du logiciel uniquement ; matériel proposé séparément.'
   },
   {
     path: 'ar/',
@@ -16,7 +16,7 @@ export const pages = [
     hreflang: true,
     title: 'برنامج صندوق في تونس للمقاهي والمطاعم والبقالات | TunisPOS',
     ogTitle: 'TunisPOS · صندوق يحسب حتى المليم',
-    description: 'TunisPOS برنامج صندوق تونسي يُسلَّم مع المعدات: طاولات وتذكرة مطبخ للمقاهي والمطاعم، باركود ومخزون للبقالات. يعمل دون إنترنت، بالعربية والفرنسية.'
+    description: 'TunisPOS برنامج صندوق تونسي للمقاهي والمطاعم والبقالات. الأسعار للبرنامج فقط؛ المعدات متاحة بشكل منفصل. يعمل دون إنترنت، بالعربية والفرنسية.'
   },
   {
     path: 'logiciel-caisse-cafe/',
@@ -25,9 +25,9 @@ export const pages = [
     article: 'cafe',
     crumb: 'Logiciel de caisse café',
     title: 'Logiciel de caisse café en Tunisie : tables, serveurs | TunisPOS',
-    description: 'Caisse pour café tunisien : plan de salle et terrasse, serveurs, ticket bar, addition partagée et ventes par serveur. 980 DT, matériel livré, sans internet.',
+    description: 'Caisse café tunisien : tables, serveurs, ticket bar et addition partagée. Logiciel 980 DT, matériel en supplément, hors ligne.',
     h1: 'La caisse du café tunisien, de la terrasse au comptoir.',
-    lede: 'Tables et terrasse, serveurs, ticket bar, addition partagée et ventes par serveur. TunisPOS Café est livré avec le matériel, en français et en arabe, et fonctionne sans internet.'
+    lede: 'Tables et terrasse, serveurs, ticket bar et addition partagée. Licence logicielle à 980 DT ; matériel disponible séparément. Fonctionne hors ligne, en français et en arabe.'
   },
   {
     path: 'logiciel-caisse-restaurant/',
@@ -36,9 +36,9 @@ export const pages = [
     article: 'restaurant',
     crumb: 'Logiciel de caisse restaurant',
     title: 'Logiciel de caisse restaurant Tunisie : ticket cuisine | TunisPOS',
-    description: 'Caisse pour restaurant en Tunisie : ticket cuisine et ticket bar, carte tunisienne prête de 39 plats, tables et addition partagée. 1 290 DT, matériel livré.',
+    description: 'Caisse restaurant : tickets cuisine et bar, carte tunisienne de 39 plats, tables et addition partagée. Logiciel 1 290 DT, matériel en supplément.',
     h1: 'La caisse de restaurant qui envoie chaque plat en cuisine.',
-    lede: 'Ticket cuisine et ticket bar, carte tunisienne prête, tables et addition partagée. TunisPOS Restaurant est livré avec le matériel et fonctionne sans internet, en français et en arabe.'
+    lede: 'Tickets cuisine et bar, carte tunisienne prête, tables et addition partagée. Licence logicielle à 1 290 DT ; matériel disponible séparément. Fonctionne hors ligne.'
   },
   {
     path: 'logiciel-caisse-epicerie/',
@@ -47,9 +47,9 @@ export const pages = [
     article: 'epicerie',
     crumb: 'Logiciel de caisse épicerie',
     title: 'Logiciel de caisse épicerie et supérette en Tunisie | TunisPOS',
-    description: 'Caisse pour épicerie et supérette en Tunisie : 2 934 articles prêts, douchette, vente au kilo, import Excel, étiquettes et stock. 890 DT, matériel livré.',
+    description: 'Caisse épicerie : 2 934 articles prêts, vente au kilo, import Excel, étiquettes et stock. Logiciel 890 DT, matériel en supplément.',
     h1: "La caisse d'épicerie qui ouvre avec 2 934 articles.",
-    lede: 'Douchette, vente au kilo, import Excel, étiquettes et stock. TunisPOS Épicerie est livré avec le matériel, en français et en arabe, et fonctionne sans internet.'
+    lede: 'Vente au kilo, import Excel, étiquettes et stock avec 2 934 articles prêts. Licence logicielle à 890 DT ; matériel disponible séparément. Fonctionne hors ligne.'
   }
 ];
 
@@ -76,7 +76,7 @@ export const articles = {
           <h3>En dinars, en arabe, sans internet</h3>
           <p>Les prix s'affichent en dinars à trois décimales (1,800 TND), l'interface passe du français à l'arabe en un clic, et la caisse continue de tourner pendant une coupure, puisqu'elle est installée sur le PC du café. Une annulation ou une remise demande le code d'un responsable.</p>
           <h3>Prix</h3>
-          <p>TunisPOS Café coûte 980 DT, payés une fois, pour un poste de caisse, avec l'installation, la formation et 12 mois d'assistance. Le pack matériel (écran tactile, imprimante ticket 80 mm, tiroir-caisse) est proposé selon votre configuration.</p>`),
+          <p>La licence TunisPOS Café coûte 980 DT, payés une fois, pour un poste de caisse, avec l'installation, la formation et 12 mois d'assistance. Ce tarif couvre le logiciel uniquement ; le matériel est proposé séparément selon votre configuration.</p>`),
 
   restaurant: article('Logiciel de caisse pour restaurant en Tunisie', `
           <p>Au restaurant, la caisse ne sert pas qu'à encaisser : elle transmet la commande. Avec TunisPOS Restaurant, le serveur ouvre la table, la caisse envoie les plats en cuisine et les boissons au bar, chacun sur son imprimante, et l'addition se règle en une fois ou en plusieurs.</p>
@@ -91,7 +91,7 @@ export const articles = {
           <h3>Des imprimantes trouvées automatiquement</h3>
           <p>TunisPOS recherche les imprimantes de votre réseau, vous laisse imprimer un test, puis envoie chaque ticket au bon poste, en 80 mm ou en 58 mm.</p>
           <h3>Prix</h3>
-          <p>TunisPOS Restaurant coûte 1 290 DT, payés une fois, pour un poste de caisse, avec l'installation, la formation et 12 mois d'assistance. Le pack matériel, avec une ou plusieurs imprimantes, est proposé selon votre configuration.</p>`),
+          <p>La licence TunisPOS Restaurant coûte 1 290 DT, payés une fois, pour un poste de caisse, avec l'installation, la formation et 12 mois d'assistance. Ce tarif couvre le logiciel uniquement ; les imprimantes et autres équipements sont proposés séparément selon votre configuration.</p>`),
 
   epicerie: article('Logiciel de caisse pour épicerie et supérette en Tunisie', `
           <p>Le plus long, quand on installe une caisse dans une épicerie, c'est de saisir les produits. TunisPOS Épicerie arrive avec des catalogues prêts, dont un catalogue grande surface de 2 934 articles, et les prix habituels de 400 articles courants déjà remplis.</p>
@@ -106,5 +106,5 @@ export const articles = {
           <h3>Pour le caissier comme pour le propriétaire</h3>
           <p>Le caissier encaisse et voit le montant à rendre. Une annulation ou une remise demande le code d'un responsable, et chaque action sensible est inscrite au journal. La sauvegarde sur clé USB garde quatorze copies.</p>
           <h3>Prix</h3>
-          <p>TunisPOS Épicerie coûte 890 DT, payés une fois, pour un poste de caisse, avec l'installation, la formation et 12 mois d'assistance. Le pack matériel, douchette comprise, est proposé selon votre configuration.</p>`)
+          <p>La licence TunisPOS Épicerie coûte 890 DT, payés une fois, pour un poste de caisse, avec l'installation, la formation et 12 mois d'assistance. Ce tarif couvre le logiciel uniquement ; douchette et autres équipements sont proposés séparément selon votre configuration.</p>`)
 };

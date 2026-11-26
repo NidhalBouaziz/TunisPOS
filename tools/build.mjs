@@ -100,6 +100,7 @@ function jsonLd(p, doc) {
       name: o.name,
       price: o.price,
       priceCurrency: 'TND',
+      description: 'Licence logicielle uniquement pour un poste ; matériel vendu séparément.',
       availability: 'https://schema.org/InStock',
       url: BASE + (o.key === 'cafe' ? 'logiciel-caisse-cafe/' : o.key === 'restaurant' ? 'logiciel-caisse-restaurant/' : 'logiciel-caisse-epicerie/'),
       seller: { '@id': BASE + '#org' }

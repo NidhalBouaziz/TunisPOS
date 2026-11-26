@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nidhalbouaziz.github.io/TunisPOS/</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nidhalbouaziz.github.io/TunisPOS/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://nidhalbouaziz.github.io/TunisPOS/ar/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nidhalbouaziz.github.io/TunisPOS/"/>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://nidhalbouaziz.github.io/TunisPOS/ar/</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nidhalbouaziz.github.io/TunisPOS/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://nidhalbouaziz.github.io/TunisPOS/ar/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nidhalbouaziz.github.io/TunisPOS/"/>
@@ -18,17 +18,17 @@
   </url>
   <url>
     <loc>https://nidhalbouaziz.github.io/TunisPOS/logiciel-caisse-cafe/</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nidhalbouaziz.github.io/TunisPOS/logiciel-caisse-restaurant/</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nidhalbouaziz.github.io/TunisPOS/logiciel-caisse-epicerie/</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
